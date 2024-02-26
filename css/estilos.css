@@ -1,0 +1,340 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+body{
+
+	box-sizing: border-box;
+	min-height: 100vh;
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	display: flex;
+	justify-content: center;
+
+}
+
+a {
+
+	text-decoration: none;
+
+}
+
+.titleTop{
+
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+}
+
+.titleTop h1{
+
+	background-color: rgba(255,255,255, .7);
+	color:#ef4135;
+	font-weight: 400;
+	padding: 0px 10px;
+
+}
+
+.titleTop h1::after{
+
+	content:" Tres colores";
+	color:#0050a4;
+
+}
+
+.titleTop a{
+
+	color: black;
+	font-weight: 400;
+
+}
+
+
+.containerGrid{
+
+	width:100%;
+	height:100vh;
+	display: grid;
+	grid-template-columns: repeat(3, calc(100% / 3));
+
+}
+
+.caja{
+
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	justify-content:flex-end;
+	align-items: flex-end;
+	padding: 50px 35px;
+
+}
+
+.containerGrid a{
+
+	text-decoration: none;
+
+}
+.containerGrid a:nth-child(1) .caja{
+
+	background: url(../img/azul.jpg) no-repeat top center/ cover;
+	color:#0050a4;
+
+}
+
+.containerGrid a:nth-child(2) .caja{
+
+	background: url(../img/blanco.jpg) no-repeat center / cover;
+	color:#fff;
+
+}
+
+.containerGrid a:nth-child(3) .caja{
+
+	background: url(../img/rojo.jpg) no-repeat top center/ cover;
+	color:#ef4135;
+
+}
+
+
+
+h2{
+
+	font-weight:400;
+	font-size: 7em;
+
+}
+
+
+.nav2{
+
+	height: 76px;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+}
+
+.nav2 a{
+
+	font-weight: 500;
+	color: black;
+	text-decoration: none;
+	padding: 0px 20px;
+
+}
+
+
+.rojo .nav2 a, .azul .nav2 a{
+
+	color:white;
+
+}
+
+.nav2 a:last-child{
+
+	padding-right: 45px;
+
+}
+
+
+
+.cont_Text{
+
+	position: relative;
+	width: 500px;
+}
+
+.cont_Text h1{
+
+	position: absolute;
+	font-size: 10em;
+	font-weight: 500;
+	top: -153px;
+	left: -80px;
+	z-index: -1;
+}
+
+
+.cont_Text img{
+	
+	box-sizing: border-box;
+	width: 100%;
+	border: 5px solid white;
+	margin: 10px 0;
+
+}
+
+.blanco .cont_Text h1{
+
+	color: #fff;
+
+}
+
+.rojo .cont_Text h1{
+
+	color: #bd332a;
+
+}
+
+.azul .cont_Text h1{
+
+	color: #003670;
+
+}
+
+
+.rojo .cont_Text p, .azul .cont_Text p{
+
+	color: white;
+
+}
+
+
+.blanco, .azul, .rojo{
+
+	padding-top: 250px;
+
+}
+
+
+.azul{
+
+	background: linear-gradient(to top, #003670, #0050a4);
+
+}
+
+
+.blanco{
+
+	background: linear-gradient(to top, #999, #eee);
+	
+}
+
+.rojo{
+
+	background: linear-gradient(to top, #bd332a, #ff4135);
+
+}
+
+p{
+	margin:10px 0;
+}
+
+/*MEDIA QUERIES -----------------------------------------------------*/
+
+
+
+@media screen and (max-width:901px){
+
+	.containerGrid{
+
+		grid-template-columns: none;
+		grid-template-rows: repeat(3, calc(100%  / 3));
+
+	}
+
+	.caja{
+		
+		padding: 10px 25px;
+
+	}
+
+	.containerGrid a:nth-child(1) .caja{
+
+		background-position: 0% 10%;
+
+	}
+
+	.containerGrid a:nth-child(2) .caja{
+
+		background-position: center;
+
+	}
+
+	.containerGrid a:nth-child(3) .caja{
+
+		background-position: 0% 15%;
+
+	}
+
+	h2{
+
+		font-size: 5em;
+
+	}
+
+}
+
+
+
+@media screen and (max-width:701px){
+
+	.nav2 .titleTop{
+		
+		width: 235px;
+
+	}
+	
+	.nav2{
+
+		justify-content: flex-start;
+		padding-top: 80px;
+
+	}
+
+	.blanco, .azul, .rojo{
+
+		padding-top: 160px;
+
+	}
+
+	.cont_Text h1{
+
+		position: initial;
+		font-size: 3em;
+
+	}
+
+}
+
+
+@media screen and (max-width:540px){
+
+	.cont_Text{
+
+		width: 300px;
+
+	}
+
+}
+
+@media screen and (max-width:501px){
+
+	.titleTop{
+		
+		width: 260px;
+
+	}
+
+	.titleTop a{
+
+		display: none;
+
+	}
+
+	.nav2 a:last-child{
+
+		padding-right: 0px;
+
+	}
+
+}
