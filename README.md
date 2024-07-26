@@ -1,2 +1,2 @@
-# descripción del REPO
-Esta es la descripción.
+# Tres COLORES
+Proyecto de Front-end para trabajar en el responsive. 
